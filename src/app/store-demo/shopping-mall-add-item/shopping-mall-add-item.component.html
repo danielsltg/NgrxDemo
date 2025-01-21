@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Add new Shop item</h1>
+  <div class="table-container">
+    <form [formGroup]="addingForm">
+      <table class="table table-dark">
+        <tr>
+          <td aria-readonly="true" class="left">Id</td>
+          <td aria-readonly="true">{{ id.value }}</td>
+        </tr>
+        <tr>
+          <td aria-readonly="true" class="left">Name</td>
+          <td><input type="text" formControlName="name"></td>
+        </tr>
+        <tr>
+          <td aria-readonly="true" class="left">Hersteller</td>
+          <td><input type="text" formControlName="manufacturer"></td>
+        </tr>
+        <tr>
+          <td aria-readonly="true" class="left">Kategorie</td>
+          <td><input type="text" formControlName="category"></td>
+        </tr>
+        <tr>
+          <td aria-readonly="true" class="left">Preis</td>
+          <td><input type="number" formControlName="cost" step="0.5"></td>
+        </tr>
+      </table>
+
+      <div class="result">
+        <button class="success-button" mat-stroked-button [disabled]="!addingForm.valid" (click)="addShopItem()" [routerLink]="'../overview'">Hinzufügen</button>
+        <button class="button" mat-stroked-button [routerLink]="'../overview'">Zurück</button>
+      </div>
+    </form>
+  </div>
+</div>

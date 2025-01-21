@@ -1,0 +1,7 @@
+@use "../node_modules/ag-grid-community/styles" as ag;
+@include ag.grid-styles((
+  theme: alpine
+));
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

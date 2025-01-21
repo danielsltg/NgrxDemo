@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Duschgel",
+    "manufacturer": "Axe",
+    "category": "Personal care",
+    "cost": 3.99
+  },
+  {
+    "id": 2,
+    "name": "Seife",
+    "manufacturer": "Nivea",
+    "category": "Personal care",
+    "cost": 1.99
+  },
+  {
+    "id": 3,
+    "name": "Wasser",
+    "manufacturer": "Volvic",
+    "category": "Drinks",
+    "cost": 0.99
+  },
+  {
+    "id": 4,
+    "name": "Bier",
+    "manufacturer": "Augustiner",
+    "category": "Drinks",
+    "cost": 1.99
+  },
+  {
+    "id": 5,
+    "name": "Cola",
+    "manufacturer": "Coka Cola",
+    "category": "Drinks",
+    "cost": 1.99
+  },
+  {
+    "id": 6,
+    "name": "Apfel",
+    "manufacturer": "Pink Lady",
+    "category": "Food",
+    "cost": 2.99
+  },
+  {
+    "id": 7,
+    "name": "Quark",
+    "manufacturer": "JA",
+    "category": "Food",
+    "cost": 0.99
+  },
+  {
+    "id": 8,
+    "name": "Hackfleisch gemischt",
+    "manufacturer": "JA",
+    "category": "Food",
+    "cost": 4.99
+  },
+  {
+    "id": 9,
+    "name": "Schokolade",
+    "manufacturer": "Milka",
+    "category": "Food",
+    "cost": 1.99
+  }
+]

@@ -1,0 +1,39 @@
+.lessons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.button {
+  background-color: lightgray;
+  margin: 2rem;
+  width: 5rem;
+}
+
+.lesson {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
+.divider {
+  width: 90%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,7 @@
+<div class="overview">
+  <h1>Shopping Mall</h1>
+  <div class="control">
+    <button class="button" mat-stroked-button [disabled]="disabled" [routerLink]="'../add'">Add Item</button>
+  </div>
+  <ag-grid-angular class="ag-theme-alpine grid" (gridReady)="gridInitialized()" domLayout="autoHeight" [columnDefs]="columns$ | async" [rowData]="rows$ | async"></ag-grid-angular>
+</div>

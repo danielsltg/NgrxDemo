@@ -1,0 +1,23 @@
+.overview {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  height: auto;
+  justify-content: center;
+}
+
+.control {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  margin: 0 1rem 1.5rem;
+}
+
+.grid {
+  width: 90%;
+  height: 500px;
+}
+
+.button {
+  background-color: lightgrey;
+}

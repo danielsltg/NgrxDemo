@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.table-container {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.table{
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+.field {
+  width: 100%;
+}
+
+.form {
+  min-width: 20rem;
+  max-width: 30rem;
+}
+
+.result {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  background-color: lightgrey;
+}
+
+.success-button {
+  background-color: lightgreen;
+}
+

@@ -1,0 +1,22 @@
+[
+  {
+    "field": "id",
+    "headerName": "Id"
+  },
+  {
+    "field": "name",
+    "headerName": "Name"
+  },
+  {
+    "field": "manufacturer",
+    "headerName": "Hersteller"
+  },
+  {
+    "field": "category",
+    "headerName": "Kategorie"
+  },
+  {
+    "field": "cost",
+    "headerName": "Preis"
+  }
+]

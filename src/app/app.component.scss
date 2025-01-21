@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem;
+}
