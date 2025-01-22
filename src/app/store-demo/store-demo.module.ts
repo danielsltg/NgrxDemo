@@ -8,6 +8,10 @@ import { AgGridModule } from 'ag-grid-angular';
 import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { MatButtonModule } from '@angular/material/button';
+import { shoppingMallReducer } from './store/shopping-mall.reducer';
+import { ShoppingMallEffects } from './store/shoppping-mall.effects';
+import { ShoppingMallState } from './store/shopping-mall.state';
+import { loadItems } from './store/shopping-mall.actions';
 
 
 @NgModule({
@@ -20,6 +24,8 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     ReactiveFormsModule,
     AgGridModule,
+    StoreModule.forRoot({ ShoppingMallState: shoppingMallReducer }),
+    EffectsModule.forRoot([ShoppingMallEffects]),
     RouterModule.forChild([
       {
         path: '',
@@ -41,6 +47,14 @@ import { MatButtonModule } from '@angular/material/button';
       }
     ])
   ],
-  providers: []
+  providers: [{
+    provide: APP_INITIALIZER, useFactory: (store: Store<ShoppingMallState>) => {
+      return () => {
+        store.dispatch(loadItems());
+      }
+    },
+    multi: true,
+    deps: [Store]
+  }]
 })
 export class StoreDemoModule { }
