@@ -7,3 +7,5 @@ export const loadItemsSuccess = createAction(
   '[ShoppingMallState] Load Items Success',
   props<{ items: ShopItem[] }>()
 );
+
+export const addItem = createAction("[Shopping Mall State] Add Item", props<ShopItem>());

@@ -4,3 +4,4 @@ import { shoppingMallFeatureKey } from "./shopping-mall.reducer";
 
 export const ShoppingMallStateSelector = createFeatureSelector<ShoppingMallState>(shoppingMallFeatureKey);
 export const ShoppingMallStateSelectItems = createSelector(ShoppingMallStateSelector, (state) => state.items);
+export const ShoppingMallStateNextId = createSelector(ShoppingMallStateSelector, state => Math.max(...(state.items.map(i => i.id))) + 1);

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { ShoppingMallStateNextId } from '../store/shopping-mall.selector';
+import { takeUntil } from 'rxjs';
+import { addItem } from '../store/shopping-mall.actions';
 
 @Component({
   selector: 'app-shopping-mall-add-item',
@@ -21,11 +25,14 @@ export class ShoppingMallAddItemComponent implements OnInit {
     cost: this.cost,
   });
 
-  constructor() { }
+  constructor(private readonly store: Store) {
+    store.select(ShoppingMallStateNextId).subscribe(nextId => this.id.setValue(nextId))
+  }
 
   ngOnInit(): void {
   }
 
   addShopItem() {
+    this.store.dispatch(addItem(this.addingForm.value))
   }
 }
