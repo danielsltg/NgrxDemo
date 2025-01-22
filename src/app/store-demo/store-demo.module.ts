@@ -8,13 +8,10 @@ import { AgGridModule } from 'ag-grid-angular';
 import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { MatButtonModule } from '@angular/material/button';
-
+import { ShoppingMallStore } from './store/shopping-mall.store';
 
 @NgModule({
-  declarations: [
-    ShoppingMallAddItemComponent,
-    ShoppingMallOverviewComponent
-  ],
+  declarations: [ShoppingMallAddItemComponent, ShoppingMallOverviewComponent],
   imports: [
     MatButtonModule,
     CommonModule,
@@ -26,21 +23,28 @@ import { MatButtonModule } from '@angular/material/button';
         children: [
           {
             path: 'overview',
-            component: ShoppingMallOverviewComponent
+            component: ShoppingMallOverviewComponent,
           },
           {
             path: 'add',
-            component: ShoppingMallAddItemComponent
+            component: ShoppingMallAddItemComponent,
           },
           {
             path: '',
             redirectTo: 'overview',
-            pathMatch: 'full'
-          }
-        ]
-      }
-    ])
+            pathMatch: 'full',
+          },
+        ],
+      },
+    ]),
   ],
-  providers: []
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (store: ShoppingMallStore) => () => store.init(),
+      multi: true,
+      deps: [ShoppingMallStore],
+    },
+  ],
 })
-export class StoreDemoModule { }
+export class StoreDemoModule {}
